@@ -8,7 +8,6 @@ use App\Http\Controllers\Controller;
 class UsersController extends Controller
 {
 
-<<<<<<< HEAD
     //返回所有用户信息
     public function index()
     {
@@ -78,17 +77,5 @@ class UsersController extends Controller
         else {
            return $this->returnMsg('404','Not found');
         }
-=======
-    public function index()
-    {
-        return user::all();
-    }
-
-    public function show($id)
-    {
-        $user = user::findOrFail($id);
-        // 数组形式
-        return $user;
->>>>>>> 23d4fa8c801894e8197c4093d5237d4b279377a4
     }
 }
