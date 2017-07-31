@@ -33,6 +33,7 @@ $api = app('Dingo\Api\Routing\Router');
 
 //Show user info via restful service.
 $api->version('v1', ['namespace' => 'App\Http\Controllers'], function ($api) {
+<<<<<<< HEAD
 
     //显示用户api
     $api->get('/users', 'UsersController@index');
@@ -54,5 +55,14 @@ $api->version('v1', ['namespace' => 'App\Http\Controllers'], function ($api) {
     //删除作品api
     $api->post('/delworks','WorksController@delUser');
     //查找作品api
+=======
+    $api->get('/users', 'UsersController@index');
+    $api->get('/users/{id}', 'UsersController@show');
+});
+
+//Show user info via restful service.
+$api->version('v1', ['namespace' => 'App\Http\Controllers'], function ($api) {
+    $api->get('/works', 'WorksController@index');
+>>>>>>> 23d4fa8c801894e8197c4093d5237d4b279377a4
     $api->get('/works/{id}', 'WorksController@show');
 });
